@@ -1,5 +1,5 @@
 # typescript-api
 First step
 `npm install`
-Second step
+To run the project
 `npm run dev`
