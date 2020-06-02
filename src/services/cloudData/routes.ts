@@ -5,10 +5,15 @@ import { getAllCloudData } from "./CloudController";
 export default [
     {
         path: "/api/v1/cloud",
-        method: "get",
-        handler: async (req: Request, res: Response) => {
-            const result = await getAllCloudData();
-            res.status(200).send(result);
-        }
+        method: "post",
+        handler: [
+            async (req: Request, res: Response) => {
+                // console.log(req.body);
+                const result = await getAllCloudData(req.body);
+                // console.log(result);
+                res.status(200).send(result);
+            }
+
+        ]
     }
 ];

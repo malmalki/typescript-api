@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "tsc-watch --onSuccess \"node ./dist/server.js\""
+    "dev": "tsc-watch --onSuccess \"node ./dist/server.js\"",
+    "test": "jest --coverage --verbose"
   },
   "keywords": [],
   "author": "",
@@ -26,5 +27,25 @@
     "swagger-ui-express": "^4.1.4",
     "tsc-watch": "^4.2.8",
     "typescript": "^3.9.3"
+  },
+  "devDependencies": {
+    "@types/jest": "^25.2.3",
+    "jest": "^26.0.1",
+    "ts-jest": "^26.1.0"
+  },
+  "jest": {
+    "verbose": true,
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
   }
 }

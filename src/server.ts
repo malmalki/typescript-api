@@ -5,6 +5,7 @@ import middleware from "./middleware";
 import errorHandlers from "./middleware/errorHandlers";
 import routes from "./services";
 
+
 process.on("uncaughtException", e => {
     console.log(e);
     process.exit(1);
